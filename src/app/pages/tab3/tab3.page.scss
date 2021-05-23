@@ -1,0 +1,23 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: pink;
+}
+
+ion-input{
+  --placeholder-color: gray ;
+  --placeholder-opacity: 0,1;
+   font-size: 15px;
+}
+
+ion-fab-button{
+  margin-bottom: 80%;
+}
+

@@ -1,0 +1,31 @@
+{
+  "CONFIG": {
+    "TITLE": "Device Configuration",
+    "HELP_1": "Press.. ",
+    "HELP_2":" to connect device",
+    "GEL": "Gel Reset",
+    "TITLE_VARIAS": "Various Configurations",
+    "MAX_AFORO": "Max occupation",
+    "AFORO_ACTUAL": "Current occupation",
+    "NIVEL_GEL": "Gel level",
+    "NIVEL_BATERIA": "Battery level",
+    "SENSOR_1": "Sensor Right",
+    "SENSOR_2": "Sensor Left",
+    "ENTRADA": "ON",
+    "SALIDA": "OFF",
+    "SENSORES_TEXT": "Invert Sensors"
+  },
+  "HELP": {
+
+  },
+  "BUY": {
+
+  },
+  "TABS": {
+    "CONFIG": "SetUp",
+    "HELP": "Help",
+    "BUY": "Buy",
+    "ADD": "Add",
+    "LIST": "List"
+  }
+}

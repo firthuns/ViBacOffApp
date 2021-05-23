@@ -1,0 +1,31 @@
+{
+  "CONFIG": {
+    "TITLE": "Configuración del Dispositivo",
+    "HELP_1": "Presiona ",
+    "HELP_2":" para conectar",
+    "GEL": "Recarga de Gel",
+    "TITLE_VARIAS": "Configuraciones Varias",
+    "MAX_AFORO": "Aforo Máximo",
+    "AFORO_ACTUAL": "Aforo Actual",
+    "NIVEL_GEL": "Nivel de Gel",
+    "NIVEL_BATERIA": "Nivel de Bateria",
+    "SENSOR_1": "Sensor Derecho",
+    "SENSOR_2": "Sensor Izquierdo",
+    "ENTRADA": "ON",
+    "SALIDA": "OFF",
+    "SENSORES_TEXT": "Invertir Sensores"
+  },
+  "HELP": {
+
+  },
+  "BUY": {
+
+  },
+  "TABS": {
+    "CONFIG": "Config",
+    "HELP": "Ayuda",
+    "BUY": "Comprar",
+    "ADD": "Agregar",
+    "LIST": "Lista"
+  }
+}

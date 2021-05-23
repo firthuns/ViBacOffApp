@@ -1,0 +1,39 @@
+
+
+.mainSlide, .mainSlide ion-slide {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 120px;
+}
+
+.pick-avatar {
+  width: 80px;
+  opacity: 0.3;
+}
+
+.pick-avatar-seleccionado {
+  transition: opacity 0.5s linear;
+  opacity: 1 !important;
+}
+
+
+// control eye password
+.btn_eye_icon{
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  background: transparent;
+  ion-icon{
+    font-size: 22px;
+    color:#757575;
+  }
+}
+
+.btn_eye_icon:focus{
+  outline: none  !important;
+}
+
+// fin control eye password

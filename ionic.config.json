@@ -1,0 +1,8 @@
+{
+  "name": "ViBacOff",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

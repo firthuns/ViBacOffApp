@@ -1,0 +1,71 @@
+<app-header titulo="Registro equipos"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <form [formGroup]="datosEquipo" autocomplete="off">
+
+    <ion-list-header>
+      <ion-label> <h1>{{ datosEquipo.value.id ? 'Editar' : 'Nuevo'}} equipo:</h1> <small> {{ datosEquipo.value.id }}</small>  </ion-label>
+    </ion-list-header>
+
+
+    <ion-item>
+      <ion-label>Núm. de serie:</ion-label>
+      <ion-input type="text"
+                 placeholder="Introduce número serie"
+                 formControlName="serial"
+                 required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Lugar instación:</ion-label>
+      <ion-input type="text"
+                 placeholder="Introduce lugar instalación"
+                 formControlName="lugarInstalacion"
+                 required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de compra:</ion-label>
+      <ion-datetime formControlName="fechaCompra"
+              [value]="fechaCompra.toISOString()"
+                    display-format="DD MMMM YYYY"
+                    (ionChange)="cambioFecha( $event )"></ion-datetime>
+    </ion-item>
+
+<!--    <ion-row>-->
+<!--      <ion-col>-->
+<!--        <ion-button expand="full"-->
+<!--                    shape="round"-->
+<!--                    >-->
+
+<!--          <ion-icon slot="start" name="camera"></ion-icon>-->
+<!--          Cámara-->
+<!--          </ion-button>-->
+<!--      </ion-col>-->
+<!--    </ion-row>-->
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="addPhotoToGallery()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+
+    </ion-fab>
+
+
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6"
+                 *ngFor="let photo of photoService.photos; index as position">
+          <ion-img [src]="photo.webviewPath"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-button  type="submit"  slot="fixed" (click)="guardarEquipo()">
+      Guardar
+    </ion-button>
+  </form>
+</ion-content>

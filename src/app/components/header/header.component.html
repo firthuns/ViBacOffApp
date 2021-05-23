@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border" translucent mode="ios">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+
+    <ion-item lines="none">
+      <ion-label>
+        <h1 class="ion-text-capitalize ion-text-center">{{ titulo}}</h1>
+        <p class="ion-padding-top">Usuario: {{ nombre}} {{ apellidos }}</p>
+      </ion-label>
+    </ion-item>
+
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logOut()">
+        <ion-icon name="log-out-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>

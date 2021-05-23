@@ -1,0 +1,100 @@
+<app-header titulo="  Listado de equipos"></app-header>
+
+
+<ion-content [fullscreen]="true"  >
+
+
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list   >
+
+    <ion-item-sliding *ngFor="let e of equipos"   >
+
+
+      <ion-item-options side="end" >
+        <!--   -->
+        <ion-item-option  color="transparent" (click)="editar(e.id)"  >
+
+
+            <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+
+
+        </ion-item-option>
+
+        <ion-item-option color="transparent" (click)="descargarFactura( e.factura )" >
+          <ion-icon  slot="icon-only" name="cloud-download-outline" ></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+
+      <ion-item lines="none">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+            <ion-label>
+              <ion-card >
+                <div class="ion-padding ">
+
+                </div>
+                    <ion-item lines="none">
+                      <h2 slot="start">
+                                             id: {{ e.id }}
+                      </h2>
+                      <h2 slot="end"> Nº Serie: {{ e.serial}}</h2>
+                    </ion-item>
+
+                <ion-label>
+                  <p class="espacios">Fecha compra: {{e.fechaCompra | date }} </p>
+                  <p  class="espacios">Instalado: {{ e.ubicacion }} </p>
+
+                </ion-label>
+
+
+              </ion-card>
+
+            </ion-label>
+
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+
+      </ion-item>
+
+      <ion-item-options side="start">
+        <!--    -->
+        <ion-item-option color="transparent" (click)="delete(e.id)" >
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+
+    </ion-item-sliding>
+
+    <ion-card *ngIf="equipos.length === 0" class="alerta ion-padding ion-text-center">
+      <ion-card-title>
+        <ion-text color="danger">
+          Sin equipos en la base de datos <ion-icon class="rojo" name="alert-outline" size="large"></ion-icon>
+        </ion-text>
+
+
+      </ion-card-title>
+
+    </ion-card>
+
+
+  </ion-list>
+
+
+
+
+
+
+  <ion-infinite-scroll threshold="100px"
+                       (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+            loadingSpinner="crescent"
+            loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+
